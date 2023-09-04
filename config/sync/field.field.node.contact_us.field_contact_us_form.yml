@@ -1,0 +1,25 @@
+uuid: 06ad801e-3d39-4cd1-a3a6-cf14c7d579dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_us_form
+    - node.type.contact_us
+  module:
+    - webform
+id: node.contact_us.field_contact_us_form
+field_name: field_contact_us_form
+entity_type: node
+bundle: contact_us
+label: 'Contact Us Form'
+description: 'You can contact to the site admin form here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

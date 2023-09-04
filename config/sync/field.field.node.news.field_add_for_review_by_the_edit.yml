@@ -1,0 +1,23 @@
+uuid: e63043cd-5b6e-415c-86a7-2b075a61af34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_for_review_by_the_edit
+    - node.type.news
+id: node.news.field_add_for_review_by_the_edit
+field_name: field_add_for_review_by_the_edit
+entity_type: node
+bundle: news
+label: 'Add for review by the editor'
+description: 'Check the box and ask for review if unchaked then ask for it is back to the draft.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

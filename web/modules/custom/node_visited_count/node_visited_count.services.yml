@@ -1,0 +1,4 @@
+services:
+  node_visited_count.service:
+    class: Drupal\node_visited_count\NodeVisitedCount
+    arguments: ['@entity_type.manager']

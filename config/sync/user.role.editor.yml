@@ -1,0 +1,20 @@
+uuid: 49cd567c-acf9-4c29-abe9-ca2e87f7f59d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - field_permissions
+    - node
+id: editor
+label: Editor
+weight: 5
+is_admin: null
+permissions:
+  - 'create field_add_for_review_by_the_edit'
+  - 'edit any news content'
+  - 'edit field_add_for_review_by_the_edit'
+  - 'edit own field_add_for_review_by_the_edit'
+  - 'view field_add_for_review_by_the_edit'
+  - 'view own field_add_for_review_by_the_edit'

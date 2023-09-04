@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Node Visited Count module.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implemets hook_entitiy_type_view().
+ */
+function node_visited_count_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  $is_anonymous = \Drupal::currentUser()->isAnonymous();
+  if ($entity->bundle() === 'news' && $is_anonymous) {
+    $node_id = $entity->id();
+    $node_visited_service = \Drupal::service('node_visited_count.service');
+    $node_visited_service->incrementCount($node_id);
+    $tags[] = 'node:' . $node_id;
+    Cache::invalidateTags($tags);
+  }
+}

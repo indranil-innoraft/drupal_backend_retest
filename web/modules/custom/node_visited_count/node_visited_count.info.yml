@@ -1,0 +1,5 @@
+name: 'Node Visited Count'
+type: module
+description: 'Node visited count for the anonymous user.'
+package: Custom
+core_version_requirement: ^10

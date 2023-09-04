@@ -1,0 +1,34 @@
+uuid: ca769e4f-1670-4364-848b-45694e05a66c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.field_add_for_review_by_the_edit
+    - field.field.node.news.field_body
+    - field.field.node.news.field_images
+    - field.field.node.news.field_published_date
+    - field.field.node.news.field_tags_news
+    - field.field.node.news.field_unique_title_and_tags
+    - field.field.node.news.field_views_count
+    - node.type.news
+  module:
+    - user
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_add_for_review_by_the_edit: true
+  field_body: true
+  field_images: true
+  field_published_date: true
+  field_tags_news: true
+  field_unique_title_and_tags: true
+  field_views_count: true

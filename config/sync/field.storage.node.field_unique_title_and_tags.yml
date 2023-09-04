@@ -1,0 +1,19 @@
+uuid: d559dddc-6bb2-42cd-8559-abbc0879fb92
+langcode: en
+status: true
+dependencies:
+  module:
+    - allow_only_one
+    - node
+id: node.field_unique_title_and_tags
+field_name: field_unique_title_and_tags
+entity_type: node
+type: allow_only_one
+settings: {  }
+module: allow_only_one
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
