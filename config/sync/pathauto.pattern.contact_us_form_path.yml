@@ -1,0 +1,22 @@
+uuid: 33f8d7fd-9ada-444d-b75c-f1636edf1a19
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: contact_us_form_path
+label: 'Contact Us Form Path'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  83eefa8b-beb7-4389-aa59-523e2f7e75f1:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 83eefa8b-beb7-4389-aa59-523e2f7e75f1
+    context_mapping:
+      node: node
+    bundles:
+      contact_us: contact_us
+selection_logic: and
+weight: -5
+relationships: {  }

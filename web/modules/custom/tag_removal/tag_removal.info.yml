@@ -1,0 +1,5 @@
+name: 'Tag removal'
+type: module
+description: 'Remove tag on after 7 days.'
+package: Custom
+core_version_requirement: ^10

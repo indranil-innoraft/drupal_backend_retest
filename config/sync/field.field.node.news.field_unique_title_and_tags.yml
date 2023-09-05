@@ -1,0 +1,31 @@
+uuid: 5e93001f-fce4-4a48-ace7-9760575ccb99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unique_title_and_tags
+    - node.type.news
+  module:
+    - allow_only_one
+third_party_settings:
+  allow_only_one:
+    field_body: 0
+    field_images: 0
+    field_published_date: 0
+    field_tags_news: 1
+    field_views_count: 0
+    title: 1
+    case_sensitive: '0'
+    limit_validation_to_published: 0
+id: node.news.field_unique_title_and_tags
+field_name: field_unique_title_and_tags
+entity_type: node
+bundle: news
+label: 'Unique Title and Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: allow_only_one

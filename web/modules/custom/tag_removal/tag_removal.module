@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Tag removal module.
+ */
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_corn().
+ */
+function tag_removal_corn() {
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'news')
+    ->accessCheck(TRUE);
+  $nids = $query->execute();
+  foreach ($nids as $nid) {
+    $node = Node::load($nid);
+    if ($node->field_feature->value && $node->field_feature_date->value) {
+      $featured_date = strtotime($node->field_feature_date->value);
+      if ($featured_date <= date('y-m-d', strtotime('now'))) {
+        $node->set('field_feature', 0);
+        $node->save();
+      }
+    }
+  }
+}

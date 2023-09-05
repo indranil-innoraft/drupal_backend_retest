@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Node title limit module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function node_title_limit_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  $node_entity = $form_state->getFormObject()->getEntity();
+  if ($node_entity->bundle() === 'news') {
+    $form['#validate'][] = 'node_title_limit_form_validate';
+  }
+}
+
+/**
+ * Validation on title field news.
+ *
+ * @param array $form
+ *   The form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state interface.
+ *
+ * @return void
+ *   If condition matched then display error message.
+ */
+function node_title_limit_form_validate(array &$form, FormStateInterface $form_state) {
+  $node_entity = $form_state->getFormObject()->getEntity();
+  if ($node_entity->bundle() === 'news') {
+    $news_title = $node_entity->label();
+    $charachet_limit = 25;
+    $news_title_length = strlen($news_title);
+    if ($charachet_limit < $news_title_length) {
+      $form_state->setErrorByName('title', t('Title character limit is 25.'));
+    }
+  }
+}

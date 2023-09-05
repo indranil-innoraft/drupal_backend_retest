@@ -1,0 +1,5 @@
+name: 'News API'
+type: module
+description: 'Fetching all the publish news based on tags.'
+package: Custom
+core_version_requirement: ^10

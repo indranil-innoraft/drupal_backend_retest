@@ -1,0 +1,30 @@
+uuid: 6032b0e4-5788-48ed-b0c4-ced85350616c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.top_five_recent_related_news
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__top_five_recent_related_news_block_1
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:top_five_recent_related_news-block_1'
+settings:
+  id: 'views_block:top_five_recent_related_news-block_1'
+  label: 'Top five recent news'
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: 'Top five recent news'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/news/*'

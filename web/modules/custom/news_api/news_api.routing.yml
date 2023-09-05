@@ -1,0 +1,16 @@
+news_api.srecret_key_settings:
+  path: '/admin/config/system/srecret-key-settings'
+  defaults:
+    _title: 'Srecret key settings'
+    _form: 'Drupal\news_api\Form\SrecretKeySettingsForm'
+  requirements:
+    _role: 'administrator'
+
+news_api.example:
+  path: '/news-api/fetch'
+  defaults:
+    _title: 'API'
+    _controller: '\Drupal\news_api\Controller\NewsApiController::build'
+    _method: [GET]
+  requirements:
+    _permission: 'access content'

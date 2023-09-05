@@ -1,0 +1,5 @@
+name: 'Node title limit'
+type: module
+description: 'Restrict the node title for news content type.'
+package: Custom
+core_version_requirement: ^10

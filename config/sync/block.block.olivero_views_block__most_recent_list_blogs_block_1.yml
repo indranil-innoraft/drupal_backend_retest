@@ -1,0 +1,29 @@
+uuid: 783dbae6-35be-4e0e-89cf-f24fdf5637e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.most_recent_list_blogs
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__most_recent_list_blogs_block_1
+theme: olivero
+region: content_below
+weight: 0
+provider: null
+plugin: 'views_block:most_recent_list_blogs-block_1'
+settings:
+  id: 'views_block:most_recent_list_blogs-block_1'
+  label: 'Most recent list news'
+  label_display: visible
+  provider: views
+  views_label: 'Most recent list news'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node

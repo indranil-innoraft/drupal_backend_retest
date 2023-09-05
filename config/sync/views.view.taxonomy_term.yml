@@ -29,7 +29,7 @@ display:
         type: mini
         options:
           offset: 0
-          items_per_page: 10
+          items_per_page: 9
           total_pages: 0
           id: 0
           tags:
@@ -213,15 +213,20 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: default
+        type: grid
         options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
           uses_fields: false
+          columns: 4
+          automatic_width: true
+          alignment: horizontal
+          row_class_custom: ''
+          row_class_default: true
+          col_class_custom: ''
+          col_class_default: true
       row:
         type: 'entity:node'
         options:
+          relationship: none
           view_mode: teaser
       query:
         type: views_query

@@ -1,0 +1,35 @@
+uuid: 49cd567c-acf9-4c29-abe9-ca2e87f7f59d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contact_us
+    - node.type.news
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_permissions
+    - node
+id: editor
+label: Editor
+weight: 5
+is_admin: null
+permissions:
+  - 'create field_add_for_review_by_the_edit'
+  - 'create field_feature'
+  - 'create field_feature_date'
+  - 'edit any news content'
+  - 'edit field_add_for_review_by_the_edit'
+  - 'edit field_feature'
+  - 'edit field_feature_date'
+  - 'edit own contact_us content'
+  - 'edit own field_add_for_review_by_the_edit'
+  - 'edit own field_feature'
+  - 'edit own field_feature_date'
+  - 'use editorial transition publish'
+  - 'view any unpublished content'
+  - 'view field_add_for_review_by_the_edit'
+  - 'view own field_add_for_review_by_the_edit'
+  - 'view own field_feature'
+  - 'view own field_feature_date'
+  - 'view own unpublished content'

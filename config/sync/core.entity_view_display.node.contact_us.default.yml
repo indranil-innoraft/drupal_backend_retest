@@ -1,0 +1,30 @@
+uuid: 34d35d7e-17b8-4213-85a4-d7dd8d1e413e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact_us.field_contact_us_form
+    - node.type.contact_us
+  module:
+    - user
+    - webform
+id: node.contact_us.default
+targetEntityType: node
+bundle: contact_us
+mode: default
+content:
+  field_contact_us_form:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

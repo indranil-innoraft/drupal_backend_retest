@@ -1,0 +1,30 @@
+uuid: 9ee0bc7a-5dce-41e4-956e-9d7817b3d3b6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f4a5f2d4-b145-4ceb-b8cb-a8a49ab693a4'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: olivero_copyrightmessage
+theme: olivero
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'block_content:f4a5f2d4-b145-4ceb-b8cb-a8a49ab693a4'
+settings:
+  id: 'block_content:f4a5f2d4-b145-4ceb-b8cb-a8a49ab693a4'
+  label: 'Copyright message'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node
