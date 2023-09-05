@@ -5,11 +5,8 @@ dependencies:
   config:
     - node.type.news
     - system.menu.main
-    - user.role.administrator
-    - user.role.reporter
   module:
     - node
-    - user
 id: reported_dashboard
 label: 'Reported Dashboard'
 module: views
@@ -222,11 +219,8 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: role
-        options:
-          role:
-            administrator: administrator
-            reporter: reporter
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -360,7 +354,6 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.roles
       tags: {  }
   page_1:
     id: page_1
@@ -388,5 +381,4 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.roles
       tags: {  }

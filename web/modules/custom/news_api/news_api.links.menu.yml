@@ -1,0 +1,5 @@
+news_api.srecret_key_settings:
+  title: Srecret key settings
+  parent: system.admin_config_system
+  route_name: news_api.srecret_key_settings
+  weight: 10

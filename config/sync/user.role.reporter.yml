@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - node.type.news
+    - workflows.workflow.editorial
   module:
+    - content_moderation
     - field_permissions
     - node
 id: reporter
@@ -16,5 +18,7 @@ permissions:
   - 'create news content'
   - 'edit own field_add_for_review_by_the_edit'
   - 'edit own news content'
+  - 'use editorial transition archived_draft'
+  - 'view any unpublished content'
   - 'view own field_published_date'
   - 'view own unpublished content'
